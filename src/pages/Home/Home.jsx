@@ -17,6 +17,8 @@ import ReactLenis from "@studio-freight/react-lenis";
 
 import { HiArrowRight } from "react-icons/hi";
 import { RiArrowRightDownLine } from "react-icons/ri";
+import GentleWater from "../../components/GentleWater/GentleWater";
+import ScrollAnimations from "../../components/NewProjects/ScrollAnimation";
 
 const Home = () => {
   const manifestoRef = useRef(null);
@@ -245,26 +247,9 @@ const Home = () => {
       <div className="home">
         <Cursor />
         <NavBar />
-        <section className="hero" id="hero">
-          <HeroGradient />
-          <div className="header-container">
-            <div className="header h-1">
-              <h1>Web Development | </h1>
-              <h1>Design</h1>
-            </div>
-            <div className="header h-2">
-              <h1>Shopify | Wordpress |</h1>
-              <h1>Webflow | React</h1>
-            </div>
-            <div className="header h-3">
-              <h1>Photography + </h1>
-              <h1>Film Production</h1>
-            </div>
-            <div className="header h-4">
-              <h1>Welcome to </h1>
-              <h1>Neer&Cronin</h1>
-            </div>
-          </div>
+       
+        <section className="hero disable-cursor" id="hero">
+         <GentleWater/>
         </section>
 
       
@@ -316,7 +301,7 @@ const Home = () => {
 
         {/* Selected Work Projects */}
 
-        <section className="work" id="work">
+        {/* <section className="work" id="work">
           <div className="container">
             <div className="work-header">
               <HiArrowRight size={13} />
@@ -343,7 +328,6 @@ const Home = () => {
                     </Link>
                   ))}
               </div>
-
               <div className="project-col">
                 {projects
                   .filter((project) => project.column === 2) // Filter projects based on their column value
@@ -365,8 +349,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
-
+       
+        </section> */}
+      <section className="anim" >
+          <ScrollAnimations/>
+        
+          </section>
+        
         {/* Processes Section */}
         <section className="processes">
           <div className="container">
